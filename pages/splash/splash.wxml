@@ -1,0 +1,11 @@
+<!--pages/splash/splash.wxml-->
+<view class="swipe-fill">
+  <swiper indicator-dots="true" class="swipe-fill">
+    <block wx:for="{{photos}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+        <button class="btn" bindtap="start" wx:if="{{index == photos.length - 1}}">立即体验</button>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
